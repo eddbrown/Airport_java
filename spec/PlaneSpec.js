@@ -2,7 +2,7 @@ describe('Plane', function(){
   var plane;
 
   it('is flying when created', function(){
-    plane = new Plane; 
+    plane = new Plane(); 
     expect(plane.isFlying).toBe(true);
   });
 
@@ -12,10 +12,11 @@ describe('Plane', function(){
     expect(plane.isFlying).toBe(false);
   });
 
-  it('take off', function(){
+  it('can fly', function(){
     plane = new Plane();
     plane.land();
-    plane.takeOff();
+    plane.fly();
     expect(plane.isFlying).toBe(true)
   });
+
 });
